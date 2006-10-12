@@ -1,0 +1,524 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<HTML>
+
+<HEAD>
+
+<TITLE>Hibernate Mappings - Table Info</TITLE>
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../assets/doc-style.css" TITLE="Style">
+
+</HEAD>
+
+<BODY>
+
+<H3>Table: account</H3>
+<H4>Schema: vislabshop.default</H4>
+
+<p></p>
+
+<A NAME="column_summary"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0">
+	<THEAD>
+		<TR>
+			<TH COLSPAN="9" CLASS="MainTableHeading">
+				Column Summary
+			</TH>
+		</TR>
+		<TR>
+			<TH WIDTH="14%">
+				Name
+			</TH>
+			<TH WIDTH="14%">
+				SqlType
+			</TH>
+			<TH WIDTH="14%">
+				Length
+			</TH>
+			<TH WIDTH="14%">
+				Precision
+			</TH>
+			<TH WIDTH="14%">
+				Scale
+			</TH>
+			<TH WIDTH="14%">
+				Nullable
+			</TH>
+			<TH WIDTH="14%">
+				Unique
+			</TH>
+		</TR>
+	</THEAD>
+	<TBODY>
+		<TR>
+			<TD>
+				<A HREF='#column_detail_email'>
+					email
+				</A>
+			</TD>
+			<TD>
+				varchar(128)
+			</TD>
+			<TD ALIGN="RIGHT">
+				128
+			</TD>
+			<TD ALIGN="RIGHT">
+				19
+			</TD>
+			<TD ALIGN="RIGHT">
+				2
+			</TD>
+			<TD ALIGN="CENTER">
+				false
+			</TD>
+			<TD ALIGN="CENTER">
+				true
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<A HREF='#column_detail_street'>
+					street
+				</A>
+			</TD>
+			<TD>
+				varchar(45)
+			</TD>
+			<TD ALIGN="RIGHT">
+				45
+			</TD>
+			<TD ALIGN="RIGHT">
+				19
+			</TD>
+			<TD ALIGN="RIGHT">
+				2
+			</TD>
+			<TD ALIGN="CENTER">
+				true
+			</TD>
+			<TD ALIGN="CENTER">
+				false
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<A HREF='#column_detail_city'>
+					city
+				</A>
+			</TD>
+			<TD>
+				varchar(45)
+			</TD>
+			<TD ALIGN="RIGHT">
+				45
+			</TD>
+			<TD ALIGN="RIGHT">
+				19
+			</TD>
+			<TD ALIGN="RIGHT">
+				2
+			</TD>
+			<TD ALIGN="CENTER">
+				true
+			</TD>
+			<TD ALIGN="CENTER">
+				false
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<A HREF='#column_detail_zipcode'>
+					zipcode
+				</A>
+			</TD>
+			<TD>
+				varchar(45)
+			</TD>
+			<TD ALIGN="RIGHT">
+				45
+			</TD>
+			<TD ALIGN="RIGHT">
+				19
+			</TD>
+			<TD ALIGN="RIGHT">
+				2
+			</TD>
+			<TD ALIGN="CENTER">
+				true
+			</TD>
+			<TD ALIGN="CENTER">
+				false
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<A HREF='#column_detail_country'>
+					country
+				</A>
+			</TD>
+			<TD>
+				varchar(45)
+			</TD>
+			<TD ALIGN="RIGHT">
+				45
+			</TD>
+			<TD ALIGN="RIGHT">
+				19
+			</TD>
+			<TD ALIGN="RIGHT">
+				2
+			</TD>
+			<TD ALIGN="CENTER">
+				true
+			</TD>
+			<TD ALIGN="CENTER">
+				false
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<A HREF='#column_detail_administrator'>
+					administrator
+				</A>
+			</TD>
+			<TD>
+				bit
+			</TD>
+			<TD ALIGN="RIGHT">
+				255
+			</TD>
+			<TD ALIGN="RIGHT">
+				19
+			</TD>
+			<TD ALIGN="RIGHT">
+				2
+			</TD>
+			<TD ALIGN="CENTER">
+				false
+			</TD>
+			<TD ALIGN="CENTER">
+				false
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<A HREF='#column_detail_password'>
+					password
+				</A>
+			</TD>
+			<TD>
+				varchar(45)
+			</TD>
+			<TD ALIGN="RIGHT">
+				45
+			</TD>
+			<TD ALIGN="RIGHT">
+				19
+			</TD>
+			<TD ALIGN="RIGHT">
+				2
+			</TD>
+			<TD ALIGN="CENTER">
+				false
+			</TD>
+			<TD ALIGN="CENTER">
+				false
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<A HREF='#column_detail_firstname'>
+					firstname
+				</A>
+			</TD>
+			<TD>
+				varchar(45)
+			</TD>
+			<TD ALIGN="RIGHT">
+				45
+			</TD>
+			<TD ALIGN="RIGHT">
+				19
+			</TD>
+			<TD ALIGN="RIGHT">
+				2
+			</TD>
+			<TD ALIGN="CENTER">
+				false
+			</TD>
+			<TD ALIGN="CENTER">
+				false
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<A HREF='#column_detail_lastname'>
+					lastname
+				</A>
+			</TD>
+			<TD>
+				varchar(45)
+			</TD>
+			<TD ALIGN="RIGHT">
+				45
+			</TD>
+			<TD ALIGN="RIGHT">
+				19
+			</TD>
+			<TD ALIGN="RIGHT">
+				2
+			</TD>
+			<TD ALIGN="CENTER">
+				false
+			</TD>
+			<TD ALIGN="CENTER">
+				false
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+<P>
+
+
+<A NAME="primary_key"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0">
+	<THEAD>
+		<TR>
+			<TH COLSPAN="2" CLASS="MainTableHeading">
+				Primary Key
+			</TH>
+		</TR>
+    </THEAD>
+	<TBODY>
+		<TR>
+			<TD WIDTH="50%">
+				PRIMARY
+			</TD>
+			<TD WIDTH="50%">
+				<A HREF='#column_detail_email'>
+					email<BR>
+				</A>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+
+
+
+<P>
+
+<A NAME="unique_keys"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0">
+	<THEAD>
+		<TR>
+			<TH COLSPAN="2" CLASS="MainTableHeading">
+				Unique Keys
+			</TH>
+		</TR>
+		<TR>
+			<TH WIDTH="50%">
+				Name
+			</TH>
+			<TH WIDTH="50%">
+				Columns
+			</TH>
+		</TR>
+	</THEAD>
+	<TBODY>
+		<TR>
+			<TD>
+				PRIMARY
+			</TD>
+			<TD>
+				<A HREF='#column_detail_email'>
+					email<BR>
+				</A>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+
+
+
+<P>
+
+<A NAME="column_detail"></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0">
+	<THEAD>
+		<TR>
+			<TH CLASS="MainTableHeading">
+    			Column Detail
+    		</TH>
+		</TR>
+	</THEAD>
+</TABLE>
+
+<A NAME='column_detail_email'></A>
+<H3>email</H3>
+
+<UL>
+	<LI><B>Type: </B>varchar(128)</LI>
+	<LI><B>Length: </B>128</LI>
+	<LI><B>Precision: </B>19</LI>
+	<LI><B>Scale: </B>2</LI>
+	<LI><B>Nullable: </B>false</LI>
+	<LI><B>Unique: </B>true</LI>
+	<LI><B>Comment: </B></LI>
+</UL>
+
+<P>
+
+
+
+<HR>
+<A NAME='column_detail_street'></A>
+<H3>street</H3>
+
+<UL>
+	<LI><B>Type: </B>varchar(45)</LI>
+	<LI><B>Length: </B>45</LI>
+	<LI><B>Precision: </B>19</LI>
+	<LI><B>Scale: </B>2</LI>
+	<LI><B>Nullable: </B>true</LI>
+	<LI><B>Unique: </B>false</LI>
+	<LI><B>Comment: </B></LI>
+</UL>
+
+<P>
+
+
+
+<HR>
+<A NAME='column_detail_city'></A>
+<H3>city</H3>
+
+<UL>
+	<LI><B>Type: </B>varchar(45)</LI>
+	<LI><B>Length: </B>45</LI>
+	<LI><B>Precision: </B>19</LI>
+	<LI><B>Scale: </B>2</LI>
+	<LI><B>Nullable: </B>true</LI>
+	<LI><B>Unique: </B>false</LI>
+	<LI><B>Comment: </B></LI>
+</UL>
+
+<P>
+
+
+
+<HR>
+<A NAME='column_detail_zipcode'></A>
+<H3>zipcode</H3>
+
+<UL>
+	<LI><B>Type: </B>varchar(45)</LI>
+	<LI><B>Length: </B>45</LI>
+	<LI><B>Precision: </B>19</LI>
+	<LI><B>Scale: </B>2</LI>
+	<LI><B>Nullable: </B>true</LI>
+	<LI><B>Unique: </B>false</LI>
+	<LI><B>Comment: </B></LI>
+</UL>
+
+<P>
+
+
+
+<HR>
+<A NAME='column_detail_country'></A>
+<H3>country</H3>
+
+<UL>
+	<LI><B>Type: </B>varchar(45)</LI>
+	<LI><B>Length: </B>45</LI>
+	<LI><B>Precision: </B>19</LI>
+	<LI><B>Scale: </B>2</LI>
+	<LI><B>Nullable: </B>true</LI>
+	<LI><B>Unique: </B>false</LI>
+	<LI><B>Comment: </B></LI>
+</UL>
+
+<P>
+
+
+
+<HR>
+<A NAME='column_detail_administrator'></A>
+<H3>administrator</H3>
+
+<UL>
+	<LI><B>Type: </B>bit</LI>
+	<LI><B>Length: </B>255</LI>
+	<LI><B>Precision: </B>19</LI>
+	<LI><B>Scale: </B>2</LI>
+	<LI><B>Nullable: </B>false</LI>
+	<LI><B>Unique: </B>false</LI>
+	<LI><B>Comment: </B></LI>
+</UL>
+
+<P>
+
+
+
+<HR>
+<A NAME='column_detail_password'></A>
+<H3>password</H3>
+
+<UL>
+	<LI><B>Type: </B>varchar(45)</LI>
+	<LI><B>Length: </B>45</LI>
+	<LI><B>Precision: </B>19</LI>
+	<LI><B>Scale: </B>2</LI>
+	<LI><B>Nullable: </B>false</LI>
+	<LI><B>Unique: </B>false</LI>
+	<LI><B>Comment: </B></LI>
+</UL>
+
+<P>
+
+
+
+<HR>
+<A NAME='column_detail_firstname'></A>
+<H3>firstname</H3>
+
+<UL>
+	<LI><B>Type: </B>varchar(45)</LI>
+	<LI><B>Length: </B>45</LI>
+	<LI><B>Precision: </B>19</LI>
+	<LI><B>Scale: </B>2</LI>
+	<LI><B>Nullable: </B>false</LI>
+	<LI><B>Unique: </B>false</LI>
+	<LI><B>Comment: </B></LI>
+</UL>
+
+<P>
+
+
+
+<HR>
+<A NAME='column_detail_lastname'></A>
+<H3>lastname</H3>
+
+<UL>
+	<LI><B>Type: </B>varchar(45)</LI>
+	<LI><B>Length: </B>45</LI>
+	<LI><B>Precision: </B>19</LI>
+	<LI><B>Scale: </B>2</LI>
+	<LI><B>Nullable: </B>false</LI>
+	<LI><B>Unique: </B>false</LI>
+	<LI><B>Comment: </B></LI>
+</UL>
+
+<P>
+
+
+
+<HR>
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+"http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<!-- ================================================ Form Bean Definitions -->
+	<form-beans>
+		<form-bean name="loginForm"
+			type="org.hska.vislab.eshop.controller.form.LoginForm" />
+		<form-bean name="registerForm"
+			type="org.hska.vislab.eshop.controller.form.RegisterForm" />
+		<form-bean name="itemDetailsForm"
+			type="org.hska.vislab.eshop.controller.form.ItemDetailsForm" />
+		<form-bean name="reorderForm"
+			type="org.hska.vislab.eshop.controller.form.ReorderForm" />
+	</form-beans>
+	<!-- =========================================== Global Forward Definitions -->
+	<global-forwards>
+		<!-- Default forward to "Login" action -->
+		<!-- Demonstrates using index.jsp to forward -->
+		<forward name="login" path="/login.do" />
+	</global-forwards>
+	<!-- =========================================== Action Mapping Definitions -->
+	<action-mappings>
+		<!-- Default "Welcome" action -->
+		<!-- Forwards to Welcome.jsp -->
+		<action path="/login" forward="/pages/login.jsp" />
+		<action path="/loginsubmit"
+			type="org.hska.vislab.eshop.controller.action.LoginAction"
+			name="loginForm" scope="request" validate="false"
+			input="/pages/login.jsp">
+			<forward name="success" path="/pages/shopindex.jsp" />
+			<forward name="success_admin" path="/showcriticalitems.do" />
+			<forward name="registration" path="/pages/registration.jsp" />
+		</action>
+		<action path="/registersubmit"
+			type="org.hska.vislab.eshop.controller.action.RegisterAction"
+			name="registerForm" scope="request" validate="true"
+			input="/pages/registration.jsp">
+			<forward name="success" path="/pages/shopindex.jsp" />
+		</action>
+		<action path="/addtocart"
+			type="org.hska.vislab.eshop.controller.action.AddItemToCart"
+			name="itemDetailsForm" scope="request" validate="true"
+			input="/pages/itemdetails.jsp">
+			<forward name="success" path="/showcart.do" />
+		</action>
+		<action path="/reorder"
+			type="org.hska.vislab.eshop.controller.action.admin.PrepareReorder"
+			scope="request" validate="false"
+			input="/pages/adminindex.jsp">
+			<forward name="success" path="/pages/reorder.jsp" />
+		</action>
+		<action path="/doreorder"
+			type="org.hska.vislab.eshop.controller.action.admin.DoReorder"
+			name="reorderForm" scope="request" validate="false"
+			input="/pages/reorder.jsp">
+			<forward name="success" path="/showcriticalitems.do" />
+		</action>
+		<action path="/removefromcart"
+			type="org.hska.vislab.eshop.controller.action.RemoveItemFromCart"
+			scope="request" validate="false">
+			<forward name="success" path="/showcart.do" />
+		</action>
+		<action path="/showallusers"
+			type="org.hska.vislab.eshop.controller.action.admin.ShowAllUsersAction"
+			scope="request" validate="false"
+			input="/pages/adminindex.jsp">
+			<forward name="success"
+				path="/pages/showallusers.jsp" />
+		</action>
+		<action path="/showgroupitems"
+			type="org.hska.vislab.eshop.controller.action.ShowGroupItems"
+			scope="request" validate="false" input="/pages/showindex.jsp">
+			<forward name="success" path="/pages/groupitems.jsp" />
+		</action>
+		<action path="/showitemdetails"
+			type="org.hska.vislab.eshop.controller.action.ShowItemDetails"
+			scope="request" validate="false" input="/pages/itemdetails.jsp">
+			<forward name="success" path="/pages/itemdetails.jsp" />
+		</action>
+		<action path="/logout"
+			type="org.hska.vislab.eshop.controller.action.LogoutAction"
+			scope="request" validate="false">
+			<forward name="success" path="/pages/logout.jsp" />
+		</action>
+		<action path="/showcriticalitems"
+			type="org.hska.vislab.eshop.controller.action.admin.GenerateAdminWarnings"
+			scope="request" validate="false">
+			<forward name="success" path="/pages/adminindex.jsp" />
+		</action>
+		<action path="/showshopindex"
+			type="org.hska.vislab.eshop.controller.action.ShowShopIndex"
+			scope="request" validate="false">
+			<forward name="success" path="/pages/shopindex.jsp" />
+		</action>
+		<action path="/showcart"
+			type="org.hska.vislab.eshop.controller.action.ShowShoppingCart"
+			scope="request" validate="false">
+			<forward name="success" path="/pages/showshoppingcart.jsp" />
+		</action>
+		<action path="/confirmorder"
+			type="org.hska.vislab.eshop.controller.action.ConfirmOrder"
+			scope="request" validate="false">
+			<forward name="success" path="/pages/confirmorder.jsp" />
+		</action>
+		<action path="/submitorder"
+			type="org.hska.vislab.eshop.controller.action.SubmitOrder"
+			scope="request" validate="false">
+			<forward name="success" path="/showshopindex.do" />
+		</action>
+	</action-mappings>
+	<!-- ======================================== Message Resources Definitions -->
+	<message-resources parameter="MessageResources" />
+</struts-config>

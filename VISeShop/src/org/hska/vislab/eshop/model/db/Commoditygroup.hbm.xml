@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 02.06.2006 12:13:09 by Hibernate Tools 3.1.0 beta1JBIDERC2 -->
+<hibernate-mapping>
+    <class name="org.hska.vislab.eshop.model.db.Commoditygroup" table="commoditygroup" catalog="vislabshop">
+        <id name="id" type="integer">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="commoditygroup" class="org.hska.vislab.eshop.model.db.Commoditygroup" fetch="select">
+            <column name="supergroup" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="45" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="1024" />
+        </property>
+        <set name="commoditygroups" inverse="true">
+            <key>
+                <column name="supergroup" />
+            </key>
+            <one-to-many class="org.hska.vislab.eshop.model.db.Commoditygroup" />
+        </set>
+        <set name="items" inverse="true">
+            <key>
+                <column name="commoditygroup_id" not-null="true" />
+            </key>
+            <one-to-many class="org.hska.vislab.eshop.model.db.Item" />
+        </set>
+    </class>
+</hibernate-mapping>

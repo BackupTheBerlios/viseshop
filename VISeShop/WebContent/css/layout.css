@@ -1,0 +1,145 @@
+.userinfo {
+	position: absolute;
+	top 5px;
+	right: 5px;
+	text-align: right;
+	padding: 5px;
+	background-color: rgb(230,230,255);
+}
+
+.backbutton {
+	border: 1px dotted black;
+	text-align: center;
+	cursor: pointer;
+}
+
+.backbutton:hover {
+	border: 2px solid black;
+	text-align: center;
+}
+
+.menu {
+  position: absolute;
+  top: 98px;
+  left: 5px;
+  width: 150px;
+  bottom: 5px;
+  background-color: rgb(220,220,220);
+  padding: 5px;
+}
+
+.top {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  height: 84px;
+  background-color: rgb(230,230,255);
+  padding: 5px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.list th {
+	background-color: #FFFF99;
+}
+
+.list tr {
+	background-color: #FFFFEE;
+	cursor: pointer;
+}
+
+.list tr:hover {
+	background-color: #FFFFCC;
+}
+
+.main {
+  position: absolute;
+  top: 110px;
+  left: 165px;
+  right: 5px;
+  padding: 5px;
+  padding-left: 20px;
+}
+
+* {
+	font-family: sans-serif;
+	font-size: 11px;
+}
+
+tabel {
+	width: 95%;
+	border: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 13px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+table {
+	width: 95%;
+	text-align: left;
+}
+
+img {
+	border: 0;
+}
+
+form {
+	float: left;
+	background-color: white;
+	border-left: thin solid silver;
+	border-top: thin solid silver;
+	border-right: medium solid silver;
+	border-bottom: medium solid silver;
+	margin: 0;
+	padding: .5em;
+	margin-bottom: 1em;
+}
+
+form label {
+	display: block;
+	float: left;
+	width: 250px;
+}
+
+form input {
+	width: 300px;
+	display: block;
+	float: left;
+	margin-bottom: 2px;
+}
+
+form br {
+	clear: left;
+}
+
+form+* {
+	clear: left;
+}
+
+form .buttons {
+	text-align: right;
+	margin-top: 0.5em;
+}
+
+form .buttons input {
+	width: auto;
+	display: inline;
+	float: none;
+}
