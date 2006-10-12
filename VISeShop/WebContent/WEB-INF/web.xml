@@ -90,3 +90,10 @@
 	</taglib>
 
 </web-app>
+
+<jsp-config>
+	<jsp-property-group>
+		<url-pattern>*.jsp</url-pattern>
+		<el-ignored>false</el-ignored>
+	</jsp-property-group>
+</jsp-config>

@@ -42,6 +42,7 @@
 	<tr>
 		<th>#</th>
 		<th>Artikelname</th>
+		<th>Warengruppen</th>
 		<th>Aktueller<br/>Bestand</th>
 		<th>Kritischer<br/>Bestand</th>
 	</tr>
@@ -50,7 +51,9 @@
 <logic:iterate id="item" name="criticalitems">
  	<tr>
 		<td><bean:write name="item" property="id" /></td>
-		<td><bean:write name="item" property="name"/></td>
+		<td><bean:write name="item" property="name" /></td>
+		<bean:define name="item" property="commoditygroup" id="commoditygroup" />
+		<td><bean:write name="commoditygroup" property="name" /></td>
 		<td style="color: red"><bean:write name="item" property="currentAmount"/></td>
 		<td><bean:write name="item" property="criticalAmount"/></td>
 		<td><html:link action="/reorder" paramId="itemid" paramName="item" paramProperty="id">Nachbestellen</html:link></td>
