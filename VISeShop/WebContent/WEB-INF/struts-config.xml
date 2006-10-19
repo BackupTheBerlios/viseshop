@@ -13,6 +13,8 @@
 			type="org.hska.vislab.eshop.controller.form.ItemDetailsForm" />
 		<form-bean name="reorderForm"
 			type="org.hska.vislab.eshop.controller.form.ReorderForm" />
+		<form-bean name="searchForm"
+			type="org.hska.vislab.eshop.controller.form.SearchForm" />
 	</form-beans>
 	<!-- =========================================== Global Forward Definitions -->
 	<global-forwards>
@@ -32,6 +34,12 @@
 			<forward name="success" path="/pages/shopindex.jsp" />
 			<forward name="success_admin" path="/showcriticalitems.do" />
 			<forward name="registration" path="/pages/registration.jsp" />
+		</action>
+		<action path="/search"
+			type="org.hska.vislab.eshop.controller.action.SearchAction"
+			name="searchForm" scope="request" validate="false"
+			input="/pages/search.jsp">
+			<forward name="showResults" path="/pages/searchresult.jsp" />
 		</action>
 		<action path="/registersubmit"
 			type="org.hska.vislab.eshop.controller.action.RegisterAction"
