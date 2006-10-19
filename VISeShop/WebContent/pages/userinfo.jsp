@@ -18,4 +18,7 @@
 	<b><html:link action="/logout"><bean:message key="prompt.logout"/></html:link></b>
 	<br /><br />
 	<b><html:link action="/showcart">[ <bean:message key="prompt.showbasket" /> ]</html:link></b>
+	<br /><br />
+	<b><html:link page="/pages/search.jsp">suchen</html:link></b>
+	
 </logic:present>
