@@ -23,7 +23,7 @@ public class SessionListener implements HttpSessionListener {
 
 	public void sessionCreated(HttpSessionEvent evt) {
 		HttpSession session = evt.getSession();
-		log.debug("Session "
+		log.info("Session "
 				+ session.getId()
 				+ "  gestartet um "
 				+ DateFormat.getTimeInstance().format(
@@ -34,7 +34,7 @@ public class SessionListener implements HttpSessionListener {
 		HttpSession session = evt.getSession();
 		if (session.getAttribute(Constants.SHOPPING_CART) != null)
 			removeReservedProducts(session);
-		log.debug("Session " + session.getId() + " abgelaufen!");
+		log.info("Session " + session.getId() + " abgelaufen!");
 	}
 
 	/**
@@ -83,6 +83,6 @@ public class SessionListener implements HttpSessionListener {
 		session.removeAttribute(Constants.SHOPPING_CART);
 		session.invalidate();
 
-		log.debug("Session gelöscht und Artikel zurückgelegt!");
+		log.info("Session gelöscht und Artikel zurückgelegt!");
 	}
 }
