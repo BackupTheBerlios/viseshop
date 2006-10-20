@@ -39,7 +39,7 @@
 			type="org.hska.vislab.eshop.controller.action.SearchAction"
 			name="searchForm" scope="request" validate="false"
 			input="/pages/search.jsp">
-			<forward name="showResults" path="/pages/searchresult.jsp" />
+			<forward name="showResults" path="/pages/searchresults.jsp" />
 		</action>
 		<action path="/registersubmit"
 			type="org.hska.vislab.eshop.controller.action.RegisterAction"

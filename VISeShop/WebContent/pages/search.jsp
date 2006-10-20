@@ -44,10 +44,10 @@
 		suchen
 	</html:submit></div>
 </html:form>
-
 </div>
+
 <div class="menu">
-<logic:iterate id="commoditygroup" name="commoditygroups">
+<%-- <logic:iterate id="commoditygroup" name="commoditygroups">
 	<b><bean:write name="commoditygroup" property="name"/></b><br>
 	<bean:define id="subgroups" name="commoditygroup" property="commoditygroups"/>
 	<ul>
@@ -60,7 +60,12 @@
 		</logic:iterate>
 	</ul>
 	<br />
-</logic:iterate>
+</logic:iterate> --%>
+
+<html:link action="showshopindex">
+	<bean:message key="prompt.back" />
+</html:link>
+
 </div>
 <div class="userinfo">
 	<jsp:include page="/pages/userinfo.jsp"/>

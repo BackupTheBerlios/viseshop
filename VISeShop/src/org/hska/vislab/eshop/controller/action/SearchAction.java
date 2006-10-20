@@ -18,7 +18,7 @@ public class SearchAction extends Action {
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 
-		return mapping.findForward("searchResults");
+		return mapping.findForward("showResults");
 	}
 
 }
