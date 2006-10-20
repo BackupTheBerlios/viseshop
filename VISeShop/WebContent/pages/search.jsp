@@ -38,14 +38,14 @@
 	<br>
 	<label>Untere Preisgrenze</label>
 	<html:text property="lowerprice"/>
-	<br>
+	
 	
 	<div class="buttons"><html:submit>
 		suchen
 	</html:submit></div>
 </html:form>
-</div>
 
+</div>
 <div class="menu">
 <%-- <logic:iterate id="commoditygroup" name="commoditygroups">
 	<b><bean:write name="commoditygroup" property="name"/></b><br>
