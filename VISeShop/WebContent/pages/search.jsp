@@ -5,7 +5,7 @@
 <html:html locale="true">
 <head>
 <title><bean:message key="welcome.title" /></title>
-<link rel="stylesheet" href="<html:rewrite href="css/layout.css"/>" />
+<link rel="stylesheet" href="<html:rewrite href="../css/layout.css"/>" />
 </head>
 
 <body>
@@ -26,7 +26,7 @@
 <!--Seiteninhalt-->
 <h1>Produktsuche</h1>
 
-<html:form action="search" focus="name">
+<html:form action="search">
 	<label>Produktname</label>
 	<html:text property="name"/>
 	<br>
@@ -39,7 +39,7 @@
 	<label>Untere Preisgrenze</label>
 	<html:text property="lowerprice"/>
 	
-	
+	<br />
 	<div class="buttons"><html:submit>
 		suchen
 	</html:submit></div>
