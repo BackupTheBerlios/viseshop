@@ -25,25 +25,40 @@
 
 <!--Seiteninhalt-->
 <h1>Produktsuche</h1>
-
-
+<table class="list">
+	<thead>
+		<tr>
+			<th><bean:message key="prompt.sharp" /></th>
+			<th><bean:message key="prompt.itemname" /></th>
+			<th align="right"><bean:message key="prompt.itemprice" /></th>
+		</tr>
+	</thead>
+	<tbody>
+		<logic:iterate id="item" name="itemlist">
+			<tr>
+				<td><bean:write name="item" property="id" /></td>
+				<td><bean:write name="item" property="name" /></td>
+				<td align="right"><bean:write name="item" property="price"
+					formatKey="formatkey.price" /> &euro;</td>
+				<td><html:link action="/showitemdetails" paramName="item"
+					paramProperty="id" paramId="itemid">
+					<bean:message key="prompt.itemdetails" />
+				</html:link></td>
+				<td><logic:lessEqual value="0" name="item" property="currentAmount">
+						<img src="<html:rewrite href='img/red.gif'/>" />
+					</logic:lessEqual>
+					<logic:greaterThan value="0" name="item" property="currentAmount">
+						<img src="<html:rewrite href='img/green.gif'/>" />
+					</logic:greaterThan>
+				</td>
+			</tr>
+		</logic:iterate>
+	</tbody>
+</table>
 
 </div>
 <div class="menu">
-<%-- <logic:iterate id="commoditygroup" name="commoditygroups">
-	<b><bean:write name="commoditygroup" property="name"/></b><br>
-	<bean:define id="subgroups" name="commoditygroup" property="commoditygroups"/>
-	<ul>
-		<logic:iterate id="subgroup" name="subgroups">
-			<li>
-				<html:link action="/showgroupitems" paramName="subgroup" paramId="groupid" paramProperty="id">
-					<bean:write name="subgroup" property="name"/>
-				</html:link>
-			</li>
-		</logic:iterate>
-	</ul>
-	<br />
-</logic:iterate> --%>
+
 
 <html:link action="showshopindex">
 	<bean:message key="prompt.back" />

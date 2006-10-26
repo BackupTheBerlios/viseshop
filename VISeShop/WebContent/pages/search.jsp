@@ -6,6 +6,7 @@
 <head>
 <title><bean:message key="welcome.title" /></title>
 <link rel="stylesheet" href="<html:rewrite href="../css/layout.css"/>" />
+<link rel="stylesheet" href="<html:rewrite href="css/layout.css"/>" />
 </head>
 
 <body>
@@ -27,11 +28,8 @@
 <h1>Produktsuche</h1>
 
 <html:form action="search">
-	<label>Produktname</label>
-	<html:text property="name"/>
-	<br>
-	<label>Beschreibung</label>
-	<html:text property="description"/>
+	<label>Suchtext</label>
+	<html:text property="searchedtext"/>
 	<br>
 	<label>Obere Preisgrenze</label>
 	<html:text property="upperprice"/>
