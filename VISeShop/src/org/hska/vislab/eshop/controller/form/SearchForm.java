@@ -48,17 +48,24 @@ public class SearchForm extends ValidatorForm {
 	public ActionErrors validate(ActionMapping mapping,
 			HttpServletRequest request) {
 		ActionErrors errors = new ActionErrors();
+		
+		float fUpperPrice = 0.0f;
+		float fLowerPrice = 0.0f;
+		
 		try{
 			if ( (upperprice != null) && (upperprice.length() > 0) )
-			Float.parseFloat(upperprice);
+			fUpperPrice = Float.parseFloat(upperprice);
 		} catch (Exception ex){
 			errors.add("search", new ActionMessage("error.search.upperprice"));
 		}
 		try{
 			if ( (lowerprice != null) && (lowerprice.length() > 0) )
-			Float.parseFloat(lowerprice);
+			fLowerPrice = Float.parseFloat(lowerprice);
 		} catch (Exception ex){
 			errors.add("search", new ActionMessage("error.search.lowerprice"));
+		}
+		if ( fUpperPrice < fLowerPrice ){
+			errors.add("search", new ActionMessage("error.search.upperpriceSamlerLowerprice"));
 		}
 		return errors;
 	}
