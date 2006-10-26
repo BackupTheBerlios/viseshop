@@ -37,7 +37,7 @@
 		</action>
 		<action path="/search"
 			type="org.hska.vislab.eshop.controller.action.SearchAction"
-			name="searchForm" scope="request" validate="false"
+			name="searchForm" scope="request" validate="true"
 			input="/pages/search.jsp">
 			<forward name="showResults" path="/pages/searchresults.jsp" />
 		</action>
