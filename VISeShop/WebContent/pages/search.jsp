@@ -12,17 +12,19 @@
 <body>
 <div class="top"><img src="<html:rewrite href='img/logo.jpg'/>" /></div>
 <div class="main">
+
 <!--Ausgabe von Fehlermeldungen-->
-<logic:messagesPresent>
+<logic:messagesPresent property="search">
 	<div class="errors">
 		Bitte korrigieren Sie folgende Fehler:
 		<ul>
-			<html:messages id="actionmessages" property="search">
+			<html:messages id="actionmessages">
 				<li><bean:write name="actionmessages" /></li>
 			</html:messages>
 		</ul>
 	</div>
 </logic:messagesPresent>
+
 <!--Seiteninhalt-->
 <h1>Produktsuche</h1>
 <html:form action="search">
