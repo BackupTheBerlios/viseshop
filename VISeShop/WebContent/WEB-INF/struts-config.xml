@@ -15,6 +15,8 @@
 			type="org.hska.vislab.eshop.controller.form.ReorderForm" />
 		<form-bean name="searchForm"
 			type="org.hska.vislab.eshop.controller.form.SearchForm" />
+		<form-bean name="itemEditForm"
+			type="org.hska.vislab.eshop.controller.form.EditItemForm" />
 	</form-beans>
 	<!-- =========================================== Global Forward Definitions -->
 	<global-forwards>
@@ -86,6 +88,18 @@
 			type="org.hska.vislab.eshop.controller.action.ShowItemDetails"
 			scope="request" validate="false" input="/pages/itemdetails.jsp">
 			<forward name="success" path="/pages/itemdetails.jsp" />
+		</action>
+		<action path="/edititemdetails"
+			type="org.hska.vislab.eshop.controller.action.EditItem"
+			scope="request" validate="false">
+			<forward name="success" path="/pages/editdetails.jsp" />
+		</action>
+		<action path="/saveitem"
+			name="itemEditForm"
+			input="/pages/editdetails.jsp"
+			type="org.hska.vislab.eshop.controller.action.SaveItem"
+			scope="request" validate="false">
+			<forward name="success" path="/showshopindex.do" />
 		</action>
 		<action path="/logout"
 			type="org.hska.vislab.eshop.controller.action.LogoutAction"

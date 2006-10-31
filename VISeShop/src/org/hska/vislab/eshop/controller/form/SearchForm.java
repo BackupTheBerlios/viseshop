@@ -59,12 +59,16 @@ public class SearchForm extends ValidatorForm {
 		} catch (Exception ex){
 			errors.add("search", new ActionMessage("error.search.upperprice"));
 		}
+		
 		try{
 			if ( (lowerprice != null) && (lowerprice.length() > 0) )
 			fLowerPrice = Float.parseFloat(lowerprice);
 		} catch (Exception ex){
 			errors.add("search", new ActionMessage("error.search.lowerprice"));
 		}
+		
+		if (lowerprice.length() == 0) fLowerPrice = Float.NEGATIVE_INFINITY;
+		if (upperprice.length() == 0) fUpperPrice = Float.POSITIVE_INFINITY;
 		if ( fUpperPrice < fLowerPrice ){
 			errors.add("search", new ActionMessage("error.search.upperpriceSamlerLowerprice"));
 		}

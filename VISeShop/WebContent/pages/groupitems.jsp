@@ -34,10 +34,26 @@
 				<td><bean:write name="item" property="name" /></td>
 				<td align="right"><bean:write name="item" property="price"
 					formatKey="formatkey.price" /> &euro;</td>
-				<td><html:link action="/showitemdetails" paramName="item"
-					paramProperty="id" paramId="itemid">
-					<bean:message key="prompt.itemdetails" />
-				</html:link></td>
+				<td>
+ 					<jsp:useBean id="account" 
+								 scope="session" 
+								 beanName="account" 
+								 type="org.hska.vislab.eshop.model.db.Account"/>
+					<!-- Benutzer können nur Artikel einsehen -->
+					<logic:equal value="false" name="account" property="administrator">
+						<html:link action="/showitemdetails" paramName="item"
+							paramProperty="id" paramId="itemid">
+							<bean:message key="prompt.itemdetails" />
+						</html:link>
+					</logic:equal>								 
+					<!-- Admin kann Artikel ändern -->			
+					<logic:equal value="true" name="account" property="administrator">
+						<html:link action="/edititemdetails" paramName="item"
+							paramProperty="id" paramId="itemid">
+							Bearbeiten
+						</html:link>
+					</logic:equal>								 	
+				</td>
 				<td><logic:lessEqual value="0" name="item" property="currentAmount">
 						<img src="<html:rewrite href='img/red.gif'/>" />
 					</logic:lessEqual>

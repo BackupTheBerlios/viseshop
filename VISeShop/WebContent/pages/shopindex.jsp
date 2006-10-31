@@ -11,20 +11,16 @@
 <body>
 <div class="top"><img src="<html:rewrite href='img/logo.jpg'/>" /></div>
 <div class="main">
-<!--Ausgabe von Fehlermeldungen-->
-<html:errors />
-
-<logic:messagesPresent message="true" name="user">
-	<html:messages id="message" message="true" property="user"></html:messages>
-</logic:messagesPresent>
-
-<logic:messagesPresent message="true" name="user">
-	<html:messages id="message" message="true"
-		property="<%=org.apache.struts.action.ActionMessages.GLOBAL_MESSAGE %>"></html:messages>
-</logic:messagesPresent>
 
 <!--Seiteninhalt-->
 <h1><bean:message key="prompt.welcome.greeting"/></h1>
+<logic:messagesPresent property="success">
+	<div class="success">
+		<ul>
+			<html:errors property="success" />
+		</ul>
+	</div>
+</logic:messagesPresent>
 </div>
 <div class="menu">
 <logic:iterate id="commoditygroup" name="commoditygroups">

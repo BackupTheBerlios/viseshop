@@ -35,4 +35,9 @@ public class ItemDAO {
 		return criticalItems;
 	}
 
+	public Item updateItem(Item item) {
+		currentSession.update(item);
+		return item;
+	}
+
 }
