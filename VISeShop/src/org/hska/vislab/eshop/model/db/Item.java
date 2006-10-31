@@ -24,6 +24,8 @@ public class Item implements java.io.Serializable {
 	private String description;
 
 	private float price;
+	
+	private String imgurl;
 
 	// Constructors
 
@@ -111,6 +113,14 @@ public class Item implements java.io.Serializable {
 
 	public void setPrice(float price) {
 		this.price = price;
+	}
+
+	public String getImgurl() {
+		return imgurl;
+	}
+
+	public void setImgurl(String imgurl) {
+		this.imgurl = imgurl;
 	}
 
 }

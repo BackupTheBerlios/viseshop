@@ -16,6 +16,7 @@
 <ul>
 	<li><html:link action="showcriticalitems">Bestände prüfen</html:link></li>
 	<li><html:link action="showallusers">Alle Benutzer anzeigen</html:link></li>
+	<li><html:link action="showshopindex">Shopindex anzeigen</html:link></li>
 </ul>
 </div>
 <div class="main">

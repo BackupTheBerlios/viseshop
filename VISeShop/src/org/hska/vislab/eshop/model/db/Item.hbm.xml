@@ -26,5 +26,8 @@
         <property name="price" type="float">
             <column name="price" precision="12" scale="0" not-null="true" />
         </property>
+        <property name="imgurl" type="string">
+        	<column name="imgurl" length="1024" />
+        </property>
     </class>
 </hibernate-mapping>

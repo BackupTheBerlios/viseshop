@@ -11,22 +11,25 @@
 <body>
 <div class="top"><img src="<html:rewrite href='img/logo.jpg'/>" /></div>
 
-<div class="main"><!--Ausgabe von Fehlermeldungen--> <html:errors /> <logic:messagesPresent
-	message="true" name="amount">
+<div class="main"><!--Ausgabe von Fehlermeldungen--> <html:errors />
+<logic:messagesPresent message="true" name="amount">
 	<html:messages id="message" message="true" property="user"></html:messages>
-</logic:messagesPresent> <!--Seiteninhalt--> <html:form
-	action="addtocart">
+</logic:messagesPresent> <!--Seiteninhalt--> <html:form action="addtocart">
 	<table>
 		<tr>
 			<td><b><bean:write name="item" property="id" /></b></td>
-			<td style="font-size: large"><bean:write name="item" property="name" /></td>
+			<td style="font-size: large"><bean:write name="item"
+				property="name" /></td>
+			<td rowspan="2" align="right">
+				<html:img src="${item.imgurl}" width="40%" />
+			</td>
 		</tr>
 		<tr>
 			<td colspan="2" rowspan="1"><pre><bean:write name="item"
 				property="description" /></pre></td>
 		</tr>
 		<tr align="right">
-			<td colspan="2" rowspan="1" style="font-size: large"><bean:message
+			<td colspan="3" rowspan="1" style="font-size: large"><bean:message
 				key="prompt.itemprice" />&nbsp;<bean:write name="item"
 				property="price" formatKey="formatkey.price" /> &euro;</td>
 		</tr>
@@ -39,8 +42,8 @@
 		</logic:lessEqual>
 		<logic:greaterThan value="0" name="item" property="currentAmount">
 			<tr>
-				<td colspan="3" rowspan="1"><html:text property="amount" value="1"
-					style="width:40px;" /> <html:submit style="width:100px;">
+				<td colspan="3" rowspan="1"><html:text property="amount"
+					value="1" style="width:40px;" /> <html:submit style="width:100px;">
 					<bean:message key="prompt.order" />
 				</html:submit></td>
 			</tr>

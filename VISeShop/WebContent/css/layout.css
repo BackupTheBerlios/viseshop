@@ -28,6 +28,18 @@
   padding: 5px;
 }
 
+.menu li {
+	list-style: circle;	
+}
+
+a {
+	color: blue;
+}
+
+a:hover {
+	color: gray;
+}
+
 .top {
   position: absolute;
   top: 5px;

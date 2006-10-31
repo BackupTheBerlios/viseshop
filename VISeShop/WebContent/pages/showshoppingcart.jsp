@@ -33,10 +33,13 @@
 	<tbody>
 		<logic:iterate id="orderitem" name="orderitems">
 			<bean:define name="orderitem" id="item" property="item" />
+			<html:hidden property="itemid"/>
 			<tr>
 				<td><bean:write name="item" property="id" /></td>
 				<td><bean:write name="item" property="name" /></td>
-				<td><bean:write name="orderitem" property="amount" /></td>
+				<td>
+					<bean:write name="orderitem" property="amount" />
+				</td>
 				<td><bean:write name="item" property="price" formatKey="formatkey.price" /> &euro;</td>
 				<td><html:link action="/removefromcart" paramName="item" paramId="itemid" paramProperty="id">
 					<img src="<html:rewrite href='img/delete.gif'/>" />
