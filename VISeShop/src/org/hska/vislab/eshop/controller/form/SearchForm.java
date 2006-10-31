@@ -49,11 +49,7 @@ public class SearchForm extends ValidatorForm {
 	public ActionErrors validate(ActionMapping mapping,
 			HttpServletRequest request) {
 		ActionErrors errors = new ActionErrors();
-		ActionMessages actionMessages = new ActionMessages();
-		actionMessages.add("search", new ActionMessage("error.search.upperprice"));
-		
-		request.setAttribute("actionmessages", actionMessages);
-		
+				
 		float fUpperPrice = 0.0f;
 		float fLowerPrice = 0.0f;
 		

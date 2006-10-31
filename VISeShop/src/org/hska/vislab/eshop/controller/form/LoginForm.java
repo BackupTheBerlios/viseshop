@@ -3,11 +3,11 @@ package org.hska.vislab.eshop.controller.form;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
+import org.apache.struts.validator.ValidatorForm;
 
-public class LoginForm extends ActionForm {
+public class LoginForm extends ValidatorForm {
 
 	/**
 	 * 
@@ -39,10 +39,10 @@ public class LoginForm extends ActionForm {
 		ActionErrors errors = new ActionErrors();
 		if (email.equals("")) {
 			errors
-					.add("username", new ActionMessage(
+					.add("login", new ActionMessage(
 							"error.username.required"));
 		} else if (!email.contains("@")) {
-			errors.add("username", new ActionMessage("error.username.email"));
+			errors.add("login", new ActionMessage("error.username.email"));
 		}
 		return errors;
 	}

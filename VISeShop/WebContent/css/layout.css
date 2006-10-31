@@ -1,6 +1,8 @@
 .errors {
 	border: 1px solid #FF99BB;
 	background-color: #FFDDEE;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	margin-left: 50px;
 	margin-right: 50px;
 	padding: 5px;

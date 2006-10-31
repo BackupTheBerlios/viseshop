@@ -11,23 +11,21 @@
 </head>
 
 <body>
-<!--Ausgabe von Fehlermeldungen-->
-<html:errors />
 
 <div class="top"><img src="<html:rewrite href='img/logo.jpg'/>" /></div>
 
-<div class="main">
-<logic:messagesPresent message="true" name="user">
-	<html:messages id="message" message="true" property="user"></html:messages>
-</logic:messagesPresent>
-
-<logic:messagesPresent message="true" name="user">
-	<html:messages id="message" message="true"
-		property="<%=org.apache.struts.action.ActionMessages.GLOBAL_MESSAGE %>"></html:messages>
-</logic:messagesPresent>
-
+<div class="main"/>
 <!--Seiteninhalt-->
 <html:form action="loginsubmit" focus="email">
+	<!--Ausgabe von Fehlermeldungen-->
+<logic:messagesPresent property="login">
+	<div class="errors">
+		Bitte korrigieren Sie folgende Fehler:
+		<ul>
+			<html:errors property="login" />
+		</ul>
+	</div>
+</logic:messagesPresent>
 	<label><bean:message key="prompt.email" /></label>
 	<html:text property="email" value="HansDampf@test.net"/>
 	<br>

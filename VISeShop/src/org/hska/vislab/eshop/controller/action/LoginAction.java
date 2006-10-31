@@ -4,11 +4,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.struts.action.Action;
+import org.apache.struts.action.ActionError;
+import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionMessage;
-import org.apache.struts.action.ActionMessages;
 import org.hska.vislab.eshop.Constants;
 import org.hska.vislab.eshop.ShoppingCart;
 import org.hska.vislab.eshop.controller.form.LoginForm;
@@ -19,6 +19,7 @@ import org.hska.vislab.eshop.model.db.Account;
 
 public class LoginAction extends Action {
 
+	@SuppressWarnings("deprecation")
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
 
@@ -54,10 +55,10 @@ public class LoginAction extends Action {
 				else
 					return mapping.findForward("success");
 			} else {
-				ActionMessages messages = new ActionMessages();
-				messages.add("user", new ActionMessage(
+				ActionErrors errors = new ActionErrors();
+				errors.add("login", new ActionError(
 						"error.user.passwordforgotten"));
-				saveMessages(request, messages);
+				saveErrors(request, errors);
 				return mapping.getInputForward();
 			}
 		}

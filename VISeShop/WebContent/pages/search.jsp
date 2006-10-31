@@ -18,9 +18,7 @@
 	<div class="errors">
 		Bitte korrigieren Sie folgende Fehler:
 		<ul>
-			<html:messages id="actionmessages">
-				<li><bean:write name="actionmessages" /></li>
-			</html:messages>
+			<html:errors property="search" />
 		</ul>
 	</div>
 </logic:messagesPresent>
