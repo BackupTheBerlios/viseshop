@@ -21,7 +21,9 @@
 			<td style="font-size: large"><bean:write name="item"
 				property="name" /></td>
 			<td rowspan="2" align="right">
-				<html:img src="${item.imgurl}" width="40%" />
+				<img src="<html:rewrite  href='${item.imgurl}' />" 
+				     width="40%" 
+				     alt="kein Bild verf&uuml;gbar" />
 			</td>
 		</tr>
 		<tr>

@@ -1,3 +1,11 @@
+.errors {
+	border: 1px solid #FF99BB;
+	background-color: #FFDDEE;
+	margin-left: 50px;
+	margin-right: 50px;
+	padding: 5px;
+}
+
 .userinfo {
 	position: absolute;
 	top 5px;
@@ -20,7 +28,7 @@
 
 .menu {
   position: absolute;
-  top: 98px;
+  top: 100px;
   left: 5px;
   width: 150px;
   bottom: 5px;
@@ -45,7 +53,7 @@ a:hover {
   top: 5px;
   left: 5px;
   right: 5px;
-  height: 84px;
+  height: 100px;
   background-color: rgb(230,230,255);
   padding: 5px;
   font-size: large;
@@ -71,12 +79,13 @@ a:hover {
   left: 165px;
   right: 5px;
   padding: 5px;
+  padding-top: 20px;
   padding-left: 20px;
 }
 
 * {
 	font-family: sans-serif;
-	font-size: 11px;
+	font-size: 12px;
 }
 
 tabel {

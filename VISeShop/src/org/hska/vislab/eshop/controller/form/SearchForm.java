@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
+import org.apache.struts.action.ActionMessages;
 import org.apache.struts.validator.ValidatorForm;
 
 public class SearchForm extends ValidatorForm {
@@ -48,6 +49,10 @@ public class SearchForm extends ValidatorForm {
 	public ActionErrors validate(ActionMapping mapping,
 			HttpServletRequest request) {
 		ActionErrors errors = new ActionErrors();
+		ActionMessages actionMessages = new ActionMessages();
+		actionMessages.add("search", new ActionMessage("error.search.upperprice"));
+		
+		request.setAttribute("actionmessages", actionMessages);
 		
 		float fUpperPrice = 0.0f;
 		float fLowerPrice = 0.0f;
