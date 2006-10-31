@@ -33,7 +33,6 @@
 	<tbody>
 		<logic:iterate id="orderitem" name="orderitems">
 			<bean:define name="orderitem" id="item" property="item" />
-			<html:hidden property="itemid"/>
 			<tr>
 				<td><bean:write name="item" property="id" /></td>
 				<td><bean:write name="item" property="name" /></td>
