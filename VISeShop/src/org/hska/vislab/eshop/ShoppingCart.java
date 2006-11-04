@@ -47,7 +47,7 @@ public class ShoppingCart {
 	 * @param item
 	 * @return
 	 */
-	private OrderEntry getEntryInOrders(Item item) {
+	public OrderEntry getEntryInOrders(Item item) {
 		Iterator<OrderEntry> iter = orders.iterator();
 		while (iter.hasNext()) {
 			OrderEntry current = iter.next();

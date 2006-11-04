@@ -6,20 +6,37 @@
 <head>
 <title><bean:message key="welcome.title" /></title>
 <link rel="stylesheet" href="<html:rewrite href="css/layout.css"/>" />
+<link rel="stylesheet" href="<html:rewrite href="../css/layout.css"/>" />
+
 </head>
 
 <body>
 <div class="top">
 <img src="<html:rewrite href='img/logo.jpg'/>" />
 </div>
-<div class="main"><!--Ausgabe von Fehlermeldungen--> <html:errors /> <logic:messagesPresent
+<div class="main">
+
+<!--Ausgabe von Fehlermeldungen-->
+<logic:messagesPresent property="illegalamount">
+	<div class="errors">
+		Bitte korrigieren Sie folgende Fehler:
+		<ul>
+			<html:errors property="illegalamount" />
+		</ul>
+	</div>
+</logic:messagesPresent>
+
+<logic:messagesPresent
 	message="true" name="user">
 	<html:messages id="message" message="true" property="user"></html:messages>
 </logic:messagesPresent> <logic:messagesPresent message="true"
 	name="user">
 	<html:messages id="message" message="true"
 		property="<%=org.apache.struts.action.ActionMessages.GLOBAL_MESSAGE %>"></html:messages>
-</logic:messagesPresent><!--Seiteninhalt-->
+</logic:messagesPresent>
+
+
+ <!--Seiteninhalt-->
 <h1><bean:message key="prompt.welcome.greeting" /></h1>
 <table>
 	<thead>
@@ -27,20 +44,30 @@
 			<th>#</th>
 			<th>Artikelname</th>
 			<th>Anzahl</th>
-			<th></th>
+			<th>Neue Anzahl</th>
 			<th>Einzelpreis</th>
 		</tr>
 	</thead>
 	<tbody>
+		
 		<logic:iterate id="orderitem" name="orderitems">
 			<bean:define name="orderitem" id="item" property="item" />
+			
 			<tr>
 				<td><bean:write name="item" property="id" /></td>
 				<td><bean:write name="item" property="name" /></td>
 				<td>
 					<bean:write name="orderitem" property="amount" />
 				</td>
-				<td><html:link action="/changeamount" paramName="item" paramId="itemid" paramProperty="id">Anzahl ändern</html:link></td>
+				<td>
+					<logic:equal value="${item.id}" parameter="itemid">
+						<html:form action="/changeitemincart">
+						<input type="hidden" name="itemid" value="<bean:write name='item' property='id'/>">
+						<html:text property="newamount"/>
+						<div class="buttons"><html:submit>ändern</html:submit></div>
+						</html:form>
+					</logic:equal>
+				</td>
 				<td><bean:write name="item" property="price" formatKey="formatkey.price" /> &euro;</td>
 				<td><html:link action="/removefromcart" paramName="item" paramId="itemid" paramProperty="id">
 					<img src="<html:rewrite href='img/delete.gif'/>" />
