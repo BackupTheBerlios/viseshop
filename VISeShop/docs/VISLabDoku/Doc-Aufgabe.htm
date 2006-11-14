@@ -1,0 +1,218 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (WinNT; I) [Netscape]">
+   <meta name="Author" content="Adelheid Knodel">
+   <title>Aufgabenstellung</title>
+</head>
+<body text="#000000" bgcolor="#FFFF99" link="#0000EE" vlink="#551A8B" alink="#FF0000">
+
+<h2>
+&nbsp;</h2>
+
+<h2>
+Aufgabenstellung</h2>
+
+<hr>
+
+
+  
+  <h2><span style="font-weight: 400;"><font face="Arial">Problembeschreibung</font></span></h2>
+
+  
+  <ul>
+
+    
+    <p>Ein Unternehmen will seine Produkte &uuml;ber das Internet in
+Form eines elektronischen Shops (eShop) seinen Kunden anbieten. </p>
+
+    
+    <p>&Uuml;ber einen Web-Browser gelangt der potentielle Kunde zur
+Einstiegseite der Web-Anwendung. Auf dieser ist neben dem Firmen-Logo
+ein Authentifizierungsdialog platziert, um den Kunden zu
+identifizieren. Sofern es sich um einen Interessenten handelt, werden
+bei dieser Gelegenheit seine relevanten Kundeninformationen (z.B. Name,
+Vorname, Lieferadresse, Kontonummer) &uuml;ber einen Kundendialog
+erfasst. </p>
+
+    
+    <p>Nach dem erfolgreichen Anmelden beim eShop kann der Kunde mit
+Hilfe eines Kataloges im gesamten Produktspektrum navigieren, die
+erreichten Produkte in einer Detailansicht mit Abbildung betrachten und
+sie anschlie&szlig;end dem Warenkorb zuf&uuml;hren. </p>
+
+    
+    <p>Der Katalog ist hierarchisch aufgebaut. Produkte mit
+&auml;hnlichen Merkmalen k&ouml;nnen zu Produktgruppen zusammengefasst
+werden. Damit ist es m&ouml;glich, dem Kunden eine &uuml;bersichtliche
+und kompakte Darstellung des Produktportfolios zu pr&auml;sentieren,
+indem ihm zuerst nur die Katalogeintr&auml;ge der obersten Ebene
+dargestellt und im weiteren Verlauf seiner Sitzung die Produktgruppen
+aufgeklappt werden, die er w&uuml;nscht. <br>
+
+&nbsp; </p>
+    <p>Die Navigation durch die Produkthierarchie soll &auml;hnlich
+gestaltet sein wie die eines File Browsers durch den Verzeichnisbaum. </p>
+
+    
+    <p>Jeder Eintrag im Katalog, zu welchem es keine Untereintr&auml;ge
+gibt, stellt einen Verweis auf die Detailansicht des jeweiligen
+Produktes dar. F&uuml;r jedes Produkt werden als Attribut verwaltet:
+eine Produktbezeichnung, eine Bestellnummer, ein Status und ein Preis.</p>
+    <p>Es erscheint der Statuswert&nbsp;&laquo;lieferbar&raquo;, wenn der
+Lagerbestand des selektierten Produktes gr&ouml;&szlig;er als Null ist, andernfalls &laquo;nicht lieferbar&raquo;. Mittels
+eines Hinzuf&uuml;gen-Buttons kann der Kunde das Produkt in den
+Warenkorb legen. </p>
+
+    
+    <p>&Uuml;ber eine Suchfunktion kann der Kunde Anfragen zu Produkten
+formulieren. Als qualifizierende Argumente stehen ihm alle Attribute
+eines Produktes zur Verf&uuml;gung. Beispielsweise kann er nach
+Produkten suchen, deren Preis unter oder &uuml;ber einem Preis oder innerhalb einer Preisspanne liegt. </p>
+
+    
+    <p>Sofern der Benutzer sich den Inhalt des Warenkorbes anzeigen
+l&auml;sst, bekommt er neben den eingestellten Produkten auch den
+Gesamtpreis pr&auml;sentiert. Hier kann er die Menge jedes Produktes
+&auml;ndern oder Produkte aus dem Warenkorb entfernen. Der Geamtpreis
+wird jeweils aktualisiert angezeigt. </p>
+
+    
+    <p>&Uuml;ber einen Button kann der Kunde den Inhalt des Warenkorbs
+bestellen. Der Bestellung folgt eine explizite Best&auml;tigung und das
+Leeren des Warenkorbs.&nbsp;</p>
+    <p>Da es vorkommen kann, dass Kunden ihren&nbsp;Einkauf unter
+welchen Umst&auml;nden auch immer abbrechen, muss nach festlegbarer
+Zeit der Warenkorb automatisch durch das System geleert werden. </p>
+
+    
+    <p>Jeder in den Warenkorb eingestellte Artikel soll als <i>
+m&ouml;glicherweise verkauft</i> vermerkt werden, um zu vermeiden,
+da&szlig; ggf. mehrere Kunden gleichzeitig einen Artikel in ihren
+Warenkorb legen und es bei der Auslieferung zu Problemen und
+m&ouml;glicherweise zu Lieferverz&ouml;gerungen f&uuml;hrt. </p>
+
+    
+    <p>Neben dem Kunden soll es die Rolle eines Administrators geben. Dem
+Administrator kommt im wesentlichen die zus&auml;tzliche Aufgabe zu, ausgegangene Waren
+nachzubestellen und &Auml;nderungen an Artikeln in die Datenbank
+einzubringen. </p>
+
+    
+    <p>Der Administrator steigt genauso wie ein Kunde &uuml;ber die
+Startseite der Web-Anwendung ein. Bei Benutzung des Produktkataloges
+bekommt er fast die gleichen Inhalte wie ein Kunde zu sehen; es
+erscheint lediglich der aktuelle Lagerbestand an Stelle des Status
+&laquo;lieferbar&raquo; oder &laquo;nicht lieferbar&raquo;. Hinzu
+kommt, dass der Bestand in einer anderen Farbe pr&auml;sentiert wird,
+falls der Meldebestand des Produktes erreicht ist. Die Produktseite
+erlaubt das Editieren der zu einem Produkt geh&ouml;renden Attribute.
+&Uuml;ber einen Button kann der Administrator veranlassen, dass neue
+Ware bestellt wird. Ein weiterer Button erlaubt das &Uuml;bernehmen der &Auml;nderungen in
+die Datenbank.</p>
+
+    
+    <p>Der Administrator soll zudem eine Liste von Meldungen einsehen
+k&ouml;nnen, die w&auml;hrend des Betriebs entstanden sind. Eine
+Meldung wird immer dann generiert, wenn bei einer Bestellung der
+Meldebestand erreicht oder unterschritten wird. Eine Meldung besteht
+aus einem Meldungstext der Produktgruppe, f&uuml;r welche die Meldung
+bestimmt ist und einem Produktbezug, der auf die zugeh&ouml;rige
+Detailansicht des Produktes verweist. <br>
+    </p>
+    <h2><small><span style="font-weight: normal; font-family: Arial;">&Uuml;bersicht</span></small></h2>
+  </ul>
+</ul>
+<p style="margin-left: 80px;">F&uuml;r die Benutzeroberfl&auml;che der Anwendung sind also folgende
+Seiten erforderlich: </p>
+<ul style="margin-left: 80px;">
+  <li>Einstiegsseite</li>
+  <li>Katalog aller Produkte f&uuml;r den Kunden</li>
+  <li>Detailansicht zu einem Produkt f&uuml;r den Kunden</li>
+  <li>Inhalt des Warenkorbs</li>
+  <li>Suchseite</li>
+  <li>Best&auml;tigung eines Kundenauftrags</li>
+  <li>Katalog aller Produkte f&uuml;r den Administrator</li>
+  <li>Meldungsseite</li>
+  <li>Detailansicht zu einem Produkt f&uuml;r den Administrator</li>
+  <li>Best&auml;tigung einer Produktnachbestellung des
+Administrators</li>
+  <li>Best&auml;tigung einer &Auml;nderung durch den Administrator</li>
+</ul>
+<br>
+<ul>
+  
+<!-- --------------------------------------------------------------- -->
+  <a name="Aufgabenstellung"></a>
+  
+  <h2><span style="font-weight: 400;"><font face="Arial">Aufgabenstellung</font></span></h2>
+
+  
+  <ul>
+
+    
+    <p>Entwerfen und implementieren Sie anhand des unter Problembeschreibung geschilderten
+Problems eine 3-Tier Client-Server-Anwendung, welche aus einem <i>Front-End</i>,
+    <i> einer Middle-Ware</i> und <i>einem Back-End</i> besteht.
+Benutzen Sie das MVC-Pattern Modell (siehe auch unter Skripte/sonstiges
+die Seminararbeit Design Patterns in Java.), das Sie anhand von Struts
+realisieren. Das Front-End bildet ein Standard-Browser, z.B. Netscape
+Communicator. Internet Explorer oder Mozilla Firefox. Die Middle-Ware besteht aus einem Web-Server, der in der
+Lage ist, nicht nur HTML-Seiten zu pr&auml;sentieren, sondern auch
+Servlets, Java Server Pages und Struts auszuf&uuml;hren. Das Back-End
+stellt eine Oracle-Datenbank 10i unter dem Betriebssystem Linux dar. Die
+Verbindung Middle-Ware zu Back-End soll &uuml;ber das Framework Hibernate
+realisiert werden. . <br>
+
+    <br>
+ </p>
+
+    
+    <p>Dokumentieren Sie Ihren Entwurf in HTML. Fertigen Sie eine
+Gesamt&uuml;bersicht Ihrer Implementierung in UML in Form eines
+Klassendiagrammes und den identifizierten Use-Cases. Modellieren Sie den Struts-Workflow der gefundenen Use-Cases mittels 
+Zustandsdiagrammen. Nachfolgend ein Beispiel für das <a href="http://www.fak-i.hs-karlsruhe.de/lab/versys/public/doc/Startzustand.gif">Startzustand-Diagramm
+</a>, das <a href="http://www.fak-i.hs-karlsruhe.de/lab/versys/public/doc/Katalognavigation.gif">Katalog-Navigation-Diagramm </a>,
+das <a href="http://www.fak-i.hs-karlsruhe.de/lab/versys/public/doc/Produktsuche.gif">Produktsuche-Diagramm</a> 
+und das <a href="http://www.fak-i.hs-karlsruhe.de/lab/versys/public/doc/DetailAnsicht.gif">Detailansicht-Diagramm</a>. Erstellen Sie ein ER-Modell f&uuml;r die Daten der Datenbank
+und dokumentieren Sie dieses anhand der (min,max) - Notation.
+Beschreiben Sie die in der Gruppe vorgenommene Aufgabenteilung. Die
+gesamte Dokumentation samt den implementierten Quellen ist in Form
+einer CD abzugeben. Eine Vorlage f&uuml;r die Dokumentation finden Sie
+unter "<a href="http://www.fak-i.hs-karlsruhe.de/lab/versys/public/doc/doc-template">Download/public-Verzeichnis
+zum Labor/doc-template</a>". <br>
+
+&nbsp; <br>
+
+&nbsp;</p>
+  </ul>
+
+
+
+    
+  
+  </ul>
+
+
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<h2>
+Aufgabenteilung</h2>
+
+<hr>
+Die Analyse, das Design und die ersten Schritte der Implementierung wurden
+zusammen in der Gruppe erstellt. Im Anschluss daran wurden die Use-Cases
+unter den Gruppenmitgliedern aufgeteilt.<br>
+<br>
+Jochen:<br>
+Enrico:<br>
+Andreas:<br>
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>
