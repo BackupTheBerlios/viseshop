@@ -29,7 +29,7 @@ public class ItemDAO {
 		Collection<Item> criticalItems = null;
 
 		Query q = currentSession
-				.createQuery("from Item as item where item.currentAmount < item.criticalAmount");
+				.createQuery("from Item as i where i.currentAmount < i.criticalAmount");
 		criticalItems = q.list();
 
 		return criticalItems;
