@@ -30,9 +30,8 @@ public class AccountDAO {
 		return (Account) currentSession.save(newAccount);
 	}
 	
-	public Account saveAccount(Account newAccount) {
-		newAccount = (Account) currentSession.save(newAccount);
-		return (Account) currentSession.save(newAccount);
+	public String saveAccount(Account newAccount) {
+		return (String) currentSession.save(newAccount);
 	}
 
 	@SuppressWarnings("unchecked")

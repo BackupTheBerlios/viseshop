@@ -10,6 +10,7 @@ import org.apache.struts.action.ActionMapping;
 import org.hska.vislab.eshop.Constants;
 import org.hska.vislab.eshop.controller.form.RegisterForm;
 import org.hska.vislab.eshop.model.dao.AccountDAO;
+import org.hska.vislab.eshop.model.dao.CommodityGroupDAO;
 import org.hska.vislab.eshop.model.dao.DAOFactory;
 import org.hska.vislab.eshop.model.db.Account;
 
@@ -20,10 +21,10 @@ public class RegisterAction extends Action {
 			throws Exception {
 
 		RegisterForm registerForm = (RegisterForm) form;
-		
-		String eMail = (String)(request.getSession().getAttribute("email"));
+
+		String eMail = (String) (request.getSession().getAttribute("email"));
 		request.getSession().removeAttribute("email");
-		
+
 		Account account = new Account();
 		account.setAdministrator(false);
 		account.setCity(registerForm.getCity());
@@ -42,13 +43,18 @@ public class RegisterAction extends Action {
 			// TODO Fehler ausgeben
 			return mapping.getInputForward();
 		}
-		
+
 		// Account in der Datenbank eintragen
 		AccountDAO accountDAO = DAOFactory.getAccountDAO();
-		account = accountDAO.saveAccount(account);
+		account.setEmail(accountDAO.saveAccount(account));
 
 		// Account an die Session Binden
 		request.getSession().setAttribute(Constants.ACCOUNT, account);
+
+		CommodityGroupDAO commodityGroupDAO = DAOFactory.getCommodityGroupDAO();
+
+		request.setAttribute("commoditygroups", commodityGroupDAO
+				.getAllRootGroups());
 
 		return mapping.findForward("success");
 	}

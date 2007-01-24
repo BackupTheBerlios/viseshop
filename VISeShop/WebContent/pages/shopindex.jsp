@@ -14,6 +14,7 @@
 
 <!--Seiteninhalt-->
 <h1><bean:message key="prompt.welcome.greeting"/></h1>
+<p>Bitte wählen sie eine Warengruppe aus der Liste aus.</p>
 <logic:messagesPresent property="success">
 	<div class="success">
 		<ul>

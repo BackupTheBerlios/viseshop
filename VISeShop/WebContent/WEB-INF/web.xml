@@ -48,6 +48,11 @@
 		</init-param>
 		<load-on-startup>2</load-on-startup>
 	</servlet>
+	
+	<error-page>
+	    <exception-type>java.lang.Exception</exception-type>
+	    <location>/pages/login.jsp</location>
+  	</error-page>
 
 
 	<!-- Standard Action Servlet Mapping -->

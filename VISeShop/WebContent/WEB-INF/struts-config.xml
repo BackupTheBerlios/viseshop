@@ -51,7 +51,7 @@
 			type="org.hska.vislab.eshop.controller.action.RegisterAction"
 			name="registerForm" scope="request" validate="true"
 			input="/pages/registration.jsp">
-			<forward name="success" path="/pages/shopindex.jsp" />
+			<forward name="success" path="/pages/login.jsp" />
 		</action>
 		<action path="/addtocart"
 			type="org.hska.vislab.eshop.controller.action.AddItemToCart"
